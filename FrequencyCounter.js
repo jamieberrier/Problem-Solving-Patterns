@@ -8,11 +8,11 @@ function same(arr1, arr2){
   let frequencyCounter1 = {}
   // object for arr2
   let frequencyCounter2 = {}
-  // loop over arr1
+  // loop over every value in arr1, add 1 or initialize to 1
   for(let val of arr1){
     frequencyCounter1[val] = (frequencyCounter1[val] || 0) + 1
   }
-  // loop over arr2
+  // loop over every value in arr2, add 1 or initialize to 1
   for(let val of arr2){
     frequencyCounter2[val] = (frequencyCounter2[val] || 0) + 1        
   }
