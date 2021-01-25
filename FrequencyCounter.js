@@ -1,10 +1,12 @@
 // break down arrays/strings into objects and then compare the objects
 function same(arr1, arr2){
+  // if arrays are not the same length, return false
   if(arr1.length !== arr2.length){
-    return false;
+    return false
   }
-
+  // object for arr1
   let frequencyCounter1 = {}
+  // object for arr2
   let frequencyCounter2 = {}
 
   for(let val of arr1){
