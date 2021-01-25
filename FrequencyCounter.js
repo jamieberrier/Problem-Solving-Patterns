@@ -1,3 +1,4 @@
+// break down arrays/strings into objects and then compare the objects
 function same(arr1, arr2){
   if(arr1.length !== arr2.length){
     return false;
@@ -18,7 +19,7 @@ function same(arr1, arr2){
     if(!(key ** 2 in frequencyCounter2)){
       return false
     }
-    
+
     if(frequencyCounter2[key ** 2] !== frequencyCounter1[key]){
       return false
     }
