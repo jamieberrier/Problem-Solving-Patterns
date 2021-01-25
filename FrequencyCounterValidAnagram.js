@@ -25,6 +25,8 @@ function validAnagram(s, t){
 
 /**
  * Alternate Solution
+ * create only one object, for 1st string, decrement from value if letter is in 2nd string
+ * if value is 0, or not in object return false
  */
 var isAnagram = function(s, t) {
   // check if string lengths are equal, return false if not
