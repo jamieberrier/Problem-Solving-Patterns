@@ -1,4 +1,5 @@
 // break down arrays/strings into objects and then compare the objects
+// use objects to construct profiles/break down contents of arrays or strings, and then quickly compare the breakdowns
 function same(arr1, arr2){
   // if arrays are not the same length, return false
   if(arr1.length !== arr2.length){
