@@ -22,3 +22,34 @@ function validAnagram(s, t){
   // if make it thru loop, return true
   return true;
 }
+
+/**
+ * Alternate Solution
+ */
+var isAnagram = function(s, t) {
+  // check if string lengths are equal, return false if not
+  if(s.length !== t.length) return false
+  
+  //  create object to break down 1st string
+  let lookup = {}
+  
+  // loop over 1st string and add to object
+  for(let char of s) {
+    lookup[char] = ++lookup[char] || 1
+  }
+  
+  // loop over 2nd string and compare to object
+  for(let letter of t) {
+      // if letter is NOT in lookup or is 0
+      if(!lookup[letter]) {
+          // not an anagram
+          return false
+      } else {
+          // subtract 1 from value
+          --lookup[letter]
+      }
+  }
+  // if make it thru loop, return true
+  return true;
+};
+
