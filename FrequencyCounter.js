@@ -1,3 +1,6 @@
+// uses objects or sets to collect values/frequencies of values
+// can avoid the need for nested loops and or O(n^2) operations with arrays and strings
+
 // break down arrays/strings into objects and then compare the objects
 // use objects to construct profiles/break down contents of arrays or strings, and then quickly compare the breakdowns
 // e.g. compare for same pieces, numbers consist of same digits
