@@ -4,6 +4,13 @@
 // break down arrays/strings into objects and then compare the objects
 // use objects to construct profiles/break down contents of arrays or strings, and then quickly compare the breakdowns
 // e.g. compare for same pieces, numbers consist of same digits
+
+// write a function called same, which accepts 2 arrays.
+// the function should return true if every value in the 1st array has it's corresponding value squared in the 2nd array.
+// the frequency of values must be the same
+// same([1,2,3,2,5], [9,1,4,4,11]) => false
+// same([1,2,3,2], [9,1,4,4]) => true
+
 function same(arr1, arr2){
   // if arrays are not the same length, return false
   if(arr1.length !== arr2.length){
@@ -38,6 +45,3 @@ function same(arr1, arr2){
   // if made it thru loop, return true
   return true
 }
-
-// same([1,2,3,2,5], [9,1,4,4,11]) => false
-// same([1,2,3,2], [9,1,4,4]) => true
