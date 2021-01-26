@@ -1,3 +1,7 @@
+// given 2 strings, write a function to determine if the 2nd string is an anagram of the 1st string.
+// validAnagram('', '') // true
+// validAnagram('aaz', 'zza') // false
+
 function validAnagram(s, t){
   // check if string lengths are equal, return false if not
   if(s.length !== t.length) return false;
@@ -54,4 +58,3 @@ var isAnagram = function(s, t) {
   // if make it thru loop, return true
   return true;
 };
-
