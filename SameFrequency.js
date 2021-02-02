@@ -23,7 +23,6 @@ function sameFrequency(num1, num2){
   for(let i of str2.toString()) {
     counter2[i] ? counter2[i] += 1 : counter2[i] = 1
   }
-
   // loop thru object1
   for(let key of counter1) {
     // check if key exists in object 2
@@ -31,14 +30,12 @@ function sameFrequency(num1, num2){
     if (!(key in counter2)) {
       return false
     }
-
     // if exists, check values match
     // return false if values do not match
     if (counter1[key] !== counter2[key]) {
       return false
     }   
   } 
-  
   // if made it thru loop, return true
   return true
 }
