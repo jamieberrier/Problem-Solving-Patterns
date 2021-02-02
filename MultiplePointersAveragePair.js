@@ -16,5 +16,15 @@
 // averagePair([],4) // false
 
 function averagePair(arr, target){
-  
+  // if arr is empty, return false
+  if (arr.length === 0) return false
+
+  // define slow pointer
+  let i = 0
+
+  // loop thru arr
+    // check if average of values at pointers === target
+      // if match, return true
+      // else
+      // 
 }
