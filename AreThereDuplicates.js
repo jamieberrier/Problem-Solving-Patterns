@@ -7,13 +7,13 @@
 function areThereDuplicates(...args) {
   let argsHash = {}
 
-  for(let element of args) {
+  for(element of args) {
     // if element is in argsHash, add 1 to value
     // if element not in argsHash, add it
     argsHash[element] ? argsHash[element] += 1 : argsHash[element] = 1
   }
   // if any value is greater than 1, return true
-  for(let key in argsHash) {
+  for(key in argsHash) {
     if (argsHash[key] > 1) return true
   }
   // made it through loop, return false
