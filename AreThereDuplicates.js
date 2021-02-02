@@ -24,8 +24,10 @@ function areThereDuplicates(...args) {
 // Two pointers
 function areThereDuplicates(...args) {
   args.sort((a,b) => a > b);
+
   let start = 0;
   let next = 1;
+
   while(next < args.length){
     if(args[start] === args[next]){
       return true
@@ -33,5 +35,6 @@ function areThereDuplicates(...args) {
     start++
     next++
   }
+  
   return false
 }
