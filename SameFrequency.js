@@ -6,6 +6,6 @@
 // sameFrequency(182, 281) // true
 // sameFrequency(34, 14) // false
 
-function sameFrequency(){
+function sameFrequency(num1, num2){
   
 }
