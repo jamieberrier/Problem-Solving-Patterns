@@ -19,11 +19,13 @@ function sameFrequency(num1, num2){
     counter2[i] ? counter2[i] += 1 : counter2[i] = 1
   }
 
-  // loop thru object1, 
+  // loop thru object1
+  for(key of counter1) {
     // check if key exists in object 2
       // if exists, check values match
         // return false if values do not matcg
-    // return false if key doee not exist  
+    // return false if key does not exist  
+  }
   
     // if made it thru loop, return true
 }
