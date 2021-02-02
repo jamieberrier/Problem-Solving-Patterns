@@ -8,7 +8,8 @@
 
 function sameFrequency(num1, num2){
   // declare empty object for each num
-
+  let counter1 = {}
+  let counter2 = {}
   // loop thru num1, adding key/values to object1
 
   // loop thru num2, adding key/values to object2
