@@ -15,6 +15,6 @@
 // averagePair([-1,0,3,4,5,6], 4.1) // false
 // averagePair([],4) // false
 
-function averagePair(){
-  // add whatever parameters you deem necessary - good luck!
+function averagePair(arr, target){
+  
 }
