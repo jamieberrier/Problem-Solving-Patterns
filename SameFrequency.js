@@ -7,5 +7,5 @@
 // sameFrequency(34, 14) // false
 
 function sameFrequency(){
-  // good luck. Add any arguments you deem necessary.
+  
 }
