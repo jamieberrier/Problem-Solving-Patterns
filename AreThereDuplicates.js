@@ -4,6 +4,7 @@
 // variable number of arguments, and checks whether there are any
 // duplicates among the arguments passed in. 
 
+// Frequency Counter
 function areThereDuplicates(...args) {
   let argsHash = {}
 
@@ -17,5 +18,20 @@ function areThereDuplicates(...args) {
     if (argsHash[key] > 1) return true
   }
   // made it through loop, return false
+  return false
+}
+
+// Two pointers
+function areThereDuplicates(...args) {
+  args.sort((a,b) => a > b);
+  let start = 0;
+  let next = 1;
+  while(next < args.length){
+    if(args[start] === args[next]){
+      return true
+    }
+    start++
+    next++
+  }
   return false
 }
