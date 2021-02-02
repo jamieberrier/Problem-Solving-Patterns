@@ -11,11 +11,11 @@ function sameFrequency(num1, num2){
   let counter1 = {}
   let counter2 = {}
   // loop thru num1, adding key/values to object1
-  for(let i of num1.toString()) {
+  for(i of num1.toString()) {
     counter1[i] ? counter1[i] += 1 : counter1[i] = 1
   }
   // loop thru num2, adding key/values to object2
-  for(let i of num2.toString()) {
+  for(i of num2.toString()) {
     counter2[i] ? counter2[i] += 1 : counter2[i] = 1
   }
 
