@@ -19,16 +19,20 @@ function averagePair(arr, target){
   // if arr is empty, return false
   if (arr.length === 0) return false
 
-  // define slow pointer
+  // define start pointer
   let i = 0
+  // define end pointer
+  let j = arr.length - 1
 
   // loop thru arr
-  // j increments with each iteration
-  for(let j = 1; j < arr.length; j++) {
-    // i increments only if average of values !== target
+  while(i < j) {
+    // if average === target, return true
+    if ((arr[i] + arr[j]) / 2 === target) return true
+    // if average > target
+    if ((arr[i] + arr[j]) / 2 > target) --j
+    // if average < target
+    if ((arr[i] + arr[j]) / 2 < target) ++i
   }
-    // check if average of values at pointers === target
-      // if match, return true
-      // else
-      // increment i
+
+  return false
 }
