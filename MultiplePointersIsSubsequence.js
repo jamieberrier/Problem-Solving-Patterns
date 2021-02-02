@@ -8,8 +8,11 @@
 // Time: O(n + m)
 // Space: O(1)
 
-// 
+// isSubsequence('hello', 'hello world') // true
+// isSubsequence('sing', 'sting') // true
+// isSubsequence('abc', 'abracadabra') // true
+// isSubsequence('abc', 'acb') // false
 
-function isSubsequence() {
-  // good luck. Add any arguments you deem necessary.
+function isSubsequence(subStr, str) {
+  
 }
