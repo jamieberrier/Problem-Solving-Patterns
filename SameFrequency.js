@@ -7,18 +7,19 @@
 // sameFrequency(34, 14) // false
 
 function sameFrequency(num1, num2){
+  // convert number to string
   const str1 = num1.toString()
   const str2 = num2.toString()
-
+  // if strings are not same length, return false
   if (str1.length !== str2.length) return false
-  // declare empty object for each num
+  // declare empty object for each str
   let counter1 = {}
   let counter2 = {}
-  // loop thru str1, adding key/values to object1
+  // loop thru str1, adding key/values to counter1
   for(let i of str1.toString()) {
     counter1[i] ? counter1[i] += 1 : counter1[i] = 1
   }
-  // loop thru str2, adding key/values to object2
+  // loop thru str2, adding key/values to counter2
   for(let i of str2.toString()) {
     counter2[i] ? counter2[i] += 1 : counter2[i] = 1
   }
