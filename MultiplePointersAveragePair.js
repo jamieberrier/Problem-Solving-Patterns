@@ -28,10 +28,12 @@ function averagePair(arr, target){
   while(i < j) {
     // if average === target, return true
     if ((arr[i] + arr[j]) / 2 === target) return true
-    // if average > target
-    if ((arr[i] + arr[j]) / 2 > target) --j
-    // if average < target
-    if ((arr[i] + arr[j]) / 2 < target) ++i
+    // if average > target, decrement j
+    if ((arr[i] + arr[j]) / 2 > target) {
+      --j
+    } else { // if average < target, increment i
+      ++i 
+    }
   }
 
   return false
