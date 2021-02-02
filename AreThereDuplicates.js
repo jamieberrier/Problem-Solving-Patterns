@@ -35,6 +35,11 @@ function areThereDuplicates(...args) {
     start++
     next++
   }
-  
+
   return false
+}
+
+// One Liner
+function areThereDuplicates() {
+  return new Set(arguments).size !== arguments.length;
 }
