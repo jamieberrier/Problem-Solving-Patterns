@@ -23,8 +23,12 @@ function averagePair(arr, target){
   let i = 0
 
   // loop thru arr
+  // j increments with each iteration
+  for(let j = 1; j < arr.length; j++) {
+    // i increments only if average of values !== target
+  }
     // check if average of values at pointers === target
       // if match, return true
       // else
-      // 
+      // increment i
 }
