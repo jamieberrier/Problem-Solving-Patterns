@@ -27,9 +27,9 @@ function sameFrequency(num1, num2){
   for(let key of counter1) {
     // check if key exists in object 2
     // return false if key does not exist  
-    if (!(key in counter2)) {
-      return false
-    }
+    // if (!(key in counter2)) {
+    //   return false
+    // }
     // if exists, check values match
     // return false if values do not match
     if (counter1[key] !== counter2[key]) {
