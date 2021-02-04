@@ -1,7 +1,7 @@
 function maxSubarraySum(arr, subLength){
 	if (arr.length < subLength) return null
 
-		
+	let max = -Infinity	
 
 }
 
