@@ -1,7 +1,7 @@
 function maxSubarraySum(arr, subLength){
 	if (arr.length < subLength) return null
 
-	//maximum sum
+	// keeps track of the maximum sum
 	let maxSum = 0
 	
   let tempSum = 0
@@ -14,7 +14,9 @@ function maxSubarraySum(arr, subLength){
 	tempSum = maxSum
 
 	for (let i = num; i < arr.length; i++) {
-    tempSum = tempSum - arr[i - num] + arr[i];
+		// add next value and subtract 1st value
+		tempSum = tempSum - arr[i - num] + arr[i];
+		// updates maxSum
     maxSum = Math.max(maxSum, tempSum);
 	}
 	
