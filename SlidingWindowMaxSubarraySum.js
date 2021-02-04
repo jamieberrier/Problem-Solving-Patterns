@@ -14,12 +14,14 @@ function maxSubarraySum(arr, subLength){
 	tempSum = maxSum
 
 	for (let i = num; i < arr.length; i++) {
-		// add next value and subtract 1st value
+		// subtract the 1st value from tempSum 
+		// and add the next value to tempSum
+		// assign new tempSum to tempSum
 		tempSum = tempSum - arr[i - num] + arr[i];
-		// updates maxSum
+		// update maxSum with greater value
     maxSum = Math.max(maxSum, tempSum);
 	}
-	
+	// return greatest sum
   return maxSum;
 }
 
