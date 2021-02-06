@@ -45,7 +45,7 @@ function maxSubarraySum(list, n){
 	let p1 = 0
 	// leading window edge
 	let p2 = n
-	// to compare new sum to previous sum
+	// to compare new sum to previous maxSum
 	let tempSum = maxSum
 	
     // continue until edge of window (p2) reaches end of list
