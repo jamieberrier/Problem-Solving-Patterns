@@ -1,3 +1,7 @@
+// Pattern: Sliding Window
+
+// Write a function called maxSubarraySum which takes an array and an
+// integer
 function maxSubarraySum(arr, subLength){
 	if (arr.length < subLength) return null
 
