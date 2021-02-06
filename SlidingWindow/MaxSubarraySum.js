@@ -26,3 +26,29 @@ function maxSubarraySum(arr, subLength){
 }
 
 maxSubarraySum([100,200,300,400], 2) // 700
+
+// alternative solution
+function maxSubarraySum(list, n){
+	if(list.length < n) return null
+
+    let maxSum = 0
+
+    for(let i = 0; i < n; i++) {
+        maxSum += list[i]
+    }
+
+    let p1 = 0
+    let p2 = n
+    let tempSum = maxSum
+    
+    while(p2 < list.length) {
+        tempSum = tempSum - list[p1] + list[p2]
+        
+        if(tempSum > maxSum) maxSum = tempSum
+
+        p1++
+        p2++
+    }
+
+    return maxSum
+}
