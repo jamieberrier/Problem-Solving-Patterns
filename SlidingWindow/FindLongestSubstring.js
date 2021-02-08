@@ -18,21 +18,23 @@ function findLongestSubstring(str){
   if(str.length === 0 || str.length === 1) return str.length
   // beginning of window
   let start = 0
-  // frequency counter
+  // store char and it's highest index in str
   let seen = {}
-  // substring counter
+  // unique char counter
   let longest = 0
 
-  // grow window (increase end) if next char doesn't match a char in substring
-  // if character matches, set start of window to end
   for(let i = 0; i < str.length; i++) {
-    // get a letter in the string
+    // get the letter at i in the string
     let char = str[i]
-    // if letter has been seen, set start to max of start or index of seen[char]
+    // if the letter is a dup, start new window
+    // set start to the max of either start 
+    // or the most recent index of the dup letter in seen
     if(seen[char]) start = Math.max(start, seen[char])
-    // index - beginning of substring + 1 (to include current in count)
+    // set longest to the max of either longest 
+    // or index - beginning of substring + 1 (to include current in count)
+    // increment longest if letter not dup
     longest = Math.max(longest, i - start + 1)
-    // store the index of the next char so as to not double count
+    // change the index of the dup letter to new index, so as to not double count
     seen[char] = i + 1
   }  
   
