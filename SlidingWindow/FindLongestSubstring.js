@@ -26,8 +26,15 @@ function findLongestSubstring(str){
   // grow window (increase end) if next char doesn't match a char in substring
   // if character matches, set start of window to end
   for(let i = 0; i < str.length; i++) {
-
+    // get a letter in the string
+    let char = str[0]
+    // if letter has been seen, set start to max of start or index of seen[char]
+    if(seen[char]) start = Math.max(start, seen[char])
+    // index - beginning of substring + 1 (to include current in count)
+    longest = Math.max(longest, i - start + 1)
+    // store the index of the next char so as to not double count
+    seen[char] = i + 1
   }  
-
+  
   return longest
 }
