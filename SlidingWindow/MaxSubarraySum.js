@@ -52,9 +52,9 @@ function maxSubarraySum(list, n){
 
 	// get baseline
 	// sum first n values & assign to maxSum
-    for(let i = 0; i < n; i++) {
-        maxSum += list[i]
-    }
+  for(let i = 0; i < n; i++) {
+    maxSum += list[i]
+  }
 
 	// trailing window edge
 	let p1 = 0
@@ -63,16 +63,16 @@ function maxSubarraySum(list, n){
 	// to compare new sum to previous maxSum
 	let tempSum = maxSum
 	
-    // continue until edge of window (p2) reaches end of list
-    while(p2 < list.length) {
-		// calc new sum including p2 and excluding p1
-        tempSum = tempSum - list[p1] + list[p2]
-        // update maxSum if tempSum is greater
-        if(tempSum > maxSum) maxSum = tempSum
-		// slide window
-        p1++
-        p2++
-    }
+  // continue until edge of window (p2) reaches end of list
+  while(p2 < list.length) {
+    // calc new sum including p2 and excluding p1
+    tempSum = tempSum - list[p1] + list[p2]
+    // update maxSum if tempSum is greater
+    if(tempSum > maxSum) maxSum = tempSum
+    // slide window
+    p1++
+    p2++
+  }
 	// return the max sum found
-    return maxSum
+  return maxSum
 }
