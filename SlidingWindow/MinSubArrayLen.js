@@ -20,11 +20,11 @@
 function minSubArrayLen(arr, sum) {
   // check sum of values against num
   let total = 0
-  let start = 0
+  let left = 0
   let right = 0
   let minLen = Infinity
 
-  while (start < arr.length) {
+  while (left < arr.length) {
     // if current window doesn't add up to the given sum then 
     // grow the window to right
     if(total < sum && right < arr.length) {
@@ -33,9 +33,9 @@ function minSubArrayLen(arr, sum) {
     } else if(total >= sum){
       // if current window adds up to at least the sum given then
       // shrink the window from the left
-      minLen = Math.min(minLen, right - start)
-      total -= arr[start]
-      start++
+      minLen = Math.min(minLen, right - left)
+      total -= arr[left]
+      left++
     } else {
       // current total less than required total but we reach the end, need this or else we'll be in an infinite loop 
       break
