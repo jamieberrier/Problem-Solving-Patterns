@@ -18,13 +18,13 @@
 // minSubArrayLen([1,4,16,22,5,7,8,9,10], 95) // 0
 
 function minSubArrayLen(arr, num) {
-  // check sum of values against num
+  // to check sum of values against num
   let sum = 0
-  // start value for leading window edge
+  // to track window leading edge
   let right = 0
-  // start value for trailing window edge
+  // to track window trailing edge
   let left = 0
-  // check for smallest subarray length
+  // to track smallest subarray length
   let minLen = Infinity
 
   // while trailing window edge is less than array length
