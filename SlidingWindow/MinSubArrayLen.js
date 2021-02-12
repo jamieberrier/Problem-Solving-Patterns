@@ -36,9 +36,10 @@ function minSubArrayLen(arr, num) {
       right++
     } else if(sum >= num){
       // if current window adds up to at least num,
-      // shrink the window from the left
+      // shrink window from the left
       minLen = Math.min(minLen, right - left)
       sum -= arr[left]
+      // shrink window
       left++
     } else {
       // current sum is less than num, but we reach the end
