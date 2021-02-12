@@ -3,7 +3,7 @@
 // Write a function called minSubArrayLen which accepts two parameters - 
 // an array of positive integers and a positive interger.
 // Should return the minimal length of a contiguous subarray of which
-// the sum >= the intger passed in. If there isn't one, return 0.
+// the num >= the intger passed in. If there isn't one, return 0.
 
 // Time Complexity: O(n)
 // Space Complexity: O(1)
@@ -17,21 +17,21 @@
 // minSubArrayLen([4,3,3,8,1,2,3], 11) // 2
 // minSubArrayLen([1,4,16,22,5,7,8,9,10], 95) // 0
 
-function minSubArrayLen(arr, sum) {
-  // check sum of values against num
+function minSubArrayLen(arr, num) {
+  // check num of values against num
   let total = 0
   let left = 0
   let right = 0
   let minLen = Infinity
 
   while (left < arr.length) {
-    // if current window doesn't add up to the given sum then 
+    // if current window doesn't add up to the given num then 
     // grow the window to right
-    if(total < sum && right < arr.length) {
+    if(total < num && right < arr.length) {
       total += arr[right]
      right++
-    } else if(total >= sum){
-      // if current window adds up to at least the sum given then
+    } else if(total >= num){
+      // if current window adds up to at least the num given then
       // shrink the window from the left
       minLen = Math.min(minLen, right - left)
       total -= arr[left]
