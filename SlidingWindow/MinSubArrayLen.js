@@ -30,9 +30,10 @@ function minSubArrayLen(arr, num) {
   // while trailing window edge is less than array length
   while (left < arr.length) {
     // if current window does NOT add up to num,
-    // grow the window to right
+    // grow window to right
     if(sum < num && right < arr.length) {
       sum += arr[right]
+      // grow window
       right++
     } else if(sum >= num){
       // if current window adds up to at least num,
