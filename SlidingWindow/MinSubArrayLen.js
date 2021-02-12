@@ -20,25 +20,25 @@
 function minSubArrayLen(arr, num) {
   // to check sum of values against num
   let sum = 0
-  // to track window leading edge
+  // to track window's leading edge
   let right = 0
-  // to track window trailing edge
+  // to track window's trailing edge
   let left = 0
   // to track smallest subarray length
   let minLen = Infinity
 
-  // while trailing window edge is less than array length
+  // while window's trailing edge is less than array length
   while (left < arr.length) {
-    // if leading window edge is less than array length
+    // if window's leading edge is less than array length
     // AND current window does NOT add up to num,
     // grow window to right 
     if(right < arr.length && sum < num) {
-      // increase sum by the value at leading window edge
+      // increase sum by the value at window's leading edge
       sum += arr[right]
-      // increment leading window edge to grow window
+      // increment window's leading edge to grow window
       right++
     } else if(sum >= num){
-      // if current window adds up to at least num,
+      // if current window adds up to AT LEAST num,
       // shrink window from the left
       // update minLen to be the lesser of current minLen or current window length
       minLen = Math.min(minLen, right - left)
