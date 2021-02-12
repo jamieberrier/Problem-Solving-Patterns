@@ -46,6 +46,7 @@ function minSubArrayLen(arr, num) {
       break
     }
   }
-
+  // return either 0 or smallest subarray length found
+  // if minLen never updated, there's no sum >= num - return 0
   return minLen === Infinity ? 0 : minLen
 }
