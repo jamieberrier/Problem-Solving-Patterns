@@ -1,7 +1,7 @@
 // Pattern: Sliding Window
 
 // Write a function called minSubArrayLen which accepts two parameters - 
-// an array of positive integers and a positive interger.
+// an array of positive integers and a positive integer.
 // Should return the minimal length of a contiguous subarray of which
 // the sum >= the intger passed in. If there isn't one, return 0.
 
@@ -30,27 +30,27 @@ function minSubArrayLen(arr, num) {
   // while window's trailing edge has NOT reached the end of the array
   while (left < arr.length) {
     // if window's leading edge has NOT reached the end of the array
-    // AND current window's values do NOT add up to num, grow window to right 
+    // AND window's values do NOT add up to num, grow window to right 
     if(right < arr.length && sum < num) {
       // increase sum by the value at window's leading edge
       sum += arr[right]
       // increment window's leading edge to grow window
       right++
     } else if(sum >= num){
-      // if current window's values DO add up to AT LEAST num, shrink window from left
-      // update smallest subarray length to the lesser of current minLen or current window's length
+      // if window's values DO add up to AT LEAST num, shrink window from left
+      // update smallest subarray length to the lesser of current minLen or window's length
       minLen = Math.min(minLen, right - left)
       // decrease sum by the value at window's trailing edge
       sum -= arr[left]
       // increment window's trailing edge to shrink window
       left++
     } else {
-      // if current sum is less than num, BUT window's leading edge HAS reached end of array
+      // current sum is less than num, BUT window's leading edge HAS reached end of array
       // needed to prevent an infinite loop 
       break
     }
   }
-  // return either smallest subarray length found or 0
+  // return smallest subarray length found or 0
   // if minLen is never updated, then there is NOT a sum >= num, so return 0
   return minLen === Infinity ? 0 : minLen
 }
