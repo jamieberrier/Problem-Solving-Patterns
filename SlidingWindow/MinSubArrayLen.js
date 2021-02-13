@@ -27,7 +27,7 @@ function minSubArrayLen(arr, num) {
   // to track smallest subarray length
   let minLen = Infinity
 
-  // while window's trailing edge is less than array length
+  // while window's trailing edge has NOT reached the end of the array
   while (left < arr.length) {
     // if window's leading edge has NOT reached the end of the array
     // AND current window's values do NOT add up to num, grow window to right 
