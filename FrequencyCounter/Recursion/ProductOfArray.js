@@ -6,6 +6,7 @@
 // productOfArray([1,2,3,10]) // 60
 
 function productOfArray(nums) {
+  // base case
   if(nums.length === 1) return nums[0]
   return nums[0] * productOfArray(nums.slice(1))
 }
