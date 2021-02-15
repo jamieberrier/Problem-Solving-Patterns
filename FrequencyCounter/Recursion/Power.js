@@ -9,5 +9,5 @@
 // power(2,4) // 16
 
 function power(base, exponent){
-    
+  if(exponent === 0) return 1
 }
