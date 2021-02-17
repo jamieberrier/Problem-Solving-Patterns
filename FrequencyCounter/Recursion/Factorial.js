@@ -9,9 +9,10 @@ function factorial(num){
 
 // recursively
 function factorial(num){
-  // negative numbers
+  // edge case - negative numbers
   if(num < 0) return 0;
   // base case
   if(num <= 1) return 1;
+  // recursive case
   return num * factorial(--num);
 }
