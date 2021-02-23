@@ -7,21 +7,20 @@
 function binarySearch(arr, num){
   let left = 0
   let right = arr.length - 1
-  let mid
+  let mid = Math.floor((left + right) / 2)
 
   // while left is smaller than or equal to right AND num not found
   while(left <= right && arr[mid] !== num) {
-    // create middle index
-    mid = Math.floor((left + right) / 2)
-    // if value matches, return index
-    if(arr[mid] === num) return mid
     // if value too large, move right pointer
     if(arr[mid] > num) right = mid - 1
     // if value too small, move left pointer
     if(arr[mid] < num) left = mid + 1
+    // move middle index
+    mid = Math.floor((left + right) / 2)
   }
-
-  return -1
+  // if value matches, return index
+  // if not, return -1
+  return arr[mid] === num ? mid : -1
 }
 
 // Original Solution
