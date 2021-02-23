@@ -12,9 +12,9 @@ function binarySearch(arr, num){
   // while left is smaller than or equal to right AND num not found
   while(left <= right && arr[mid] !== num) {
     // if value too large, move right pointer
-    if(arr[mid] > num) right = mid - 1
+    if(arr[mid] > num) right = --mid
     // if value too small, move left pointer
-    if(arr[mid] < num) left = mid + 1
+    if(arr[mid] < num) left = ++mid
     // move middle index
     mid = Math.floor((left + right) / 2)
   }
