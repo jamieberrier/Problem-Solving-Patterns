@@ -9,7 +9,8 @@ function binarySearch(arr, num){
   let right = arr.length - 1
   let mid
 
-  while(left <= right) {
+  // while left is smaller than or equal to right AND num not found
+  while(left <= right && arr[mid] !== num) {
     // create middle index
     mid = Math.floor((left + right) / 2)
     // if value matches, return index
