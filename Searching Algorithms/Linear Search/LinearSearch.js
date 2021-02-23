@@ -5,11 +5,9 @@
 // linearSearch([10,15,20,25,30],15) -> 1
 
 function linearSearch(arr, num){
-  let numIndex = -1
-
   for(let i = 0; i < arr.length; i++) {
-    if(arr[i] === num) numIndex = i
+    if(arr[i] === num) return i
   }
 
-  return numIndex
+  return -1
 }
