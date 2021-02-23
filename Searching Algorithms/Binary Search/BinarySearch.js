@@ -15,11 +15,10 @@ function binarySearch(arr, num){
     if(arr[mid] > num) right = --mid
     // if value too small, move left pointer
     if(arr[mid] < num) left = ++mid
-    // move middle index
+    // set new middle index
     mid = Math.floor((left + right) / 2)
   }
-  // if value matches, return index
-  // if not, return -1
+  // if value matches, return index, else return -1
   return arr[mid] === num ? mid : -1
 }
 
