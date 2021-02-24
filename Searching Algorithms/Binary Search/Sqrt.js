@@ -16,3 +16,10 @@ Constraints:
 0 <= x <= 231 - 1
 */
 
+/**
+ * @param {number} x
+ * @return {number}
+ */
+var mySqrt = function(x) {
+    
+};
