@@ -5,6 +5,25 @@
 // binarySearch([1,2,3,4,5],2) -> 1
 
 function binarySearch(arr, num){
+  // set start pointer
+  let start = 0
+  // set end pointer
+  let end = arr.length - 1
+  // set mid pointer
+  let mid
+  
+  while(start <= end) {
+    // set new mid pointer
+    mid = Math.floor((start + end) / 2)
+    if(arr[mid] === num) return mid
+    if(arr[mid] > num) end = mid - 1
+    if(arr[mid] < num) start = mid + 1
+  }
+  
+  return -1
+}
+
+function binarySearch(arr, num){
   let left = 0
   let right = arr.length - 1
   let mid = Math.floor((left + right) / 2)
