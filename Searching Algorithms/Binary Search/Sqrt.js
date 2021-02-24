@@ -14,6 +14,9 @@ Explanation: The square root of 8 is 2.82842..., and since the decimal part is t
 
 Constraints:
 0 <= x <= 231 - 1
+
+Hint 1: Try exploring all integers.
+Hint 2: Use the sorted property of integers to reduced the search space.
 */
 
 /**
@@ -21,5 +24,23 @@ Constraints:
  * @return {number}
  */
 var mySqrt = function(x) {
-    
+  if(x === 0) return 0
+  
+  let left = 1;
+  let right = Math.floor(x / 2) + 1;
+  let mid;
+
+  while (left <= right) {
+    mid = Math.floor((left + right) / 2);
+
+    if (mid * mid > x) {
+      right = mid - 1;
+    } else if (mid * mid < x) {
+      left = mid + 1;
+    } else {
+      return mid;
+    }
+  }
+
+  return right;
 };
