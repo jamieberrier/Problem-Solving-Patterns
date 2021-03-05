@@ -26,4 +26,8 @@ function binarySearch(nums, target){
 
   let left = 0;
   let right = nums.length;
+
+  while(left < right){
+    
+  }
 }
