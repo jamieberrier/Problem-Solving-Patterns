@@ -48,18 +48,22 @@ var solution = function(isBadVersion) {
    * @return {integer} The first bad version
    */
   return function(n) {
-    let left = 1
-    let right = n
+    let left = 1 // oldest version
+    let right = n // latest version
       
     while(left < right) {
       let mid = Math.floor((left + right) / 2)
       
+      // if mid is a bad version
       if(isBadVersion(mid)) {
-        right = mid  // look to the left of mid
+        // keep bad version: look to the left of mid for 1st bad version
+        right = mid
       } else {
-        left = mid + 1 // look to the right of mid
+        // skip good version: look to the right of mid for 1st bad version
+        left = mid + 1
       }
     }
+    // 1st bad version
     return left
   };
 };
