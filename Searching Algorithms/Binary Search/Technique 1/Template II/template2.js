@@ -32,10 +32,15 @@ function binarySearch(nums, target){
 
     if(nums[mid] === target) {
       return mid
-    } else if() {
-
+    } else if(nums[mid] < target) {
+      left = mid + 1
     } else {
-
+      right = mid
     }
   }
+
+  // Post-processing
+  // End Condition: left == right
+  if(left != nums.length && nums[left] == target) return left;
+  return -1;
 }
