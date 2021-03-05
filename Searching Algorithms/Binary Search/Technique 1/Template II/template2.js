@@ -29,6 +29,13 @@ function binarySearch(nums, target){
 
   while(left < right){
     let mid = Math.floor((left + right) / 2);
-    
+
+    if() {
+
+    } else if() {
+
+    } else {
+      
+    }
   }
 }
