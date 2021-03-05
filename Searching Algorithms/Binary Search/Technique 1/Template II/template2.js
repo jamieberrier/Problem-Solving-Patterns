@@ -40,7 +40,7 @@ function binarySearch(nums, target){
   }
 
   // Post-processing
-  // End Condition: left == right
-  if(left != nums.length && nums[left] == target) return left;
+  // End Condition: left === right
+  if(left !== nums.length && nums[left] === target) return left;
   return -1;
 }
