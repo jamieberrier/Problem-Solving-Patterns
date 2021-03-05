@@ -22,20 +22,20 @@ int binarySearch(int[] nums, int target){
 */
 
 function binarySearch(nums, target){
-  if(nums === null || nums.length === 0) return -1;
+  if(nums === null || nums.length === 0) return -1
 
-  let left = 0;
-  let right = nums.length;
+  let left = 0
+  let right = nums.length
 
   while(left < right){
-    let mid = Math.floor((left + right) / 2);
+    let mid = Math.floor((left + right) / 2)
 
-    if() {
-
+    if(nums[mid] === target) {
+      return mid
     } else if() {
 
     } else {
-      
+
     }
   }
 }
