@@ -23,4 +23,7 @@ int binarySearch(int[] nums, int target){
 
 function binarySearch(nums, target){
   if(nums === null || nums.length === 0) return -1;
+
+  let left = 0;
+  let right = nums.length;
 }
