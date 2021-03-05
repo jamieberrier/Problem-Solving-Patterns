@@ -20,3 +20,7 @@ int binarySearch(int[] nums, int target){
 }
 
 */
+
+function binarySearch(nums, target){
+  
+}
