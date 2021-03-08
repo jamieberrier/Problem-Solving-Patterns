@@ -52,6 +52,7 @@ var solution = function(isBadVersion) {
     let right = n // latest version
       
     while(left < right) {
+      // middle version
       let mid = Math.floor((left + right) / 2)
       
       // if mid is a bad version
