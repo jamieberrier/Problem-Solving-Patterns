@@ -20,3 +20,30 @@ Constraints:
   -231 <= nums[i] <= 231 - 1
   nums[i] != nums[i + 1] for all valid i.
 */
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+ var findPeakElement = function(nums) {
+   if(nums.length === 1) return 0
+    
+   let left = 0
+   let right = nums.length - 1
+
+   while(left < right) {
+    let mid = Math.floor((left + right) / 2)
+
+    // if middle element is greater than its immediate right neighbor
+    if(nums[mid] > nums[mid + 1]) {
+      // 
+      right = mid
+    } else {
+      // if middle element is less than its immediate right neighbor
+      // 
+      left = mid + 1
+    }
+   }
+   // 
+   return left
+};
