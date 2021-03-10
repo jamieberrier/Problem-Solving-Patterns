@@ -22,3 +22,13 @@ Constraints:
   arr is sorted in ascending order.
   -104 <= arr[i], x <= 104
 */
+
+/**
+ * @param {number[]} arr
+ * @param {number} k
+ * @param {number} x
+ * @return {number[]}
+ */
+ var findClosestElements = function(arr, k, x) {
+    
+};
