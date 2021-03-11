@@ -47,3 +47,34 @@ Constraints:
    // 
    return left
 };
+
+var findPeakElement = function(nums) {
+  // if only 1 element, return its index
+  if(nums.length === 1) return 0
+
+  // Initial Condition
+  let left = 0
+  let right = nums.length - 1
+
+  // Termination: left + 1 === right
+  while(left + 1 < right) {
+    // index of middle element
+    let mid = Math.floor((left + right) / 2)
+
+    // if middle element is less than its immediate right neighbor
+    if(nums[mid] < nums[mid + 1]) {
+      // search right
+      left = mid
+    } else {
+      // middle element is greater than its immediate right neighbor
+      // search left
+      right = mid
+    }
+  }
+  // Post-processing:
+  // End Condition: left + 1 === right
+  // if left element is greater than right element, return index of left element
+  if(nums[left] > nums[right]) return left
+  // if left element is less than right element, return index of right element
+  if(nums[left] < nums[right]) return right
+ };
