@@ -27,7 +27,7 @@ function binarySearch(nums, target){
 
   // Post-processing:
   // End Condition: left + 1 === right
-   // if left element equals target, return index of left element
+  // if left element equals target, return index of left element
   if(nums[left] === target) return left
   // if right element equals target, return index of right element
   if(nums[right] === target) return right
