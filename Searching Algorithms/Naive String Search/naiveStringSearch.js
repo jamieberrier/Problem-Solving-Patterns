@@ -8,6 +8,20 @@ Pseudocode
 - return the count
 */
 
-function stringSearch() {
-  
+function stringSearch(long, short) {
+  let count = 0
+
+  // outer loop
+  for(let i = 0; i < long.length; i++) {
+    // inner loop
+    for(let j = 0; j < short.length; j++) {
+      if(long[i] !== short[j]) break
+
+      if(j === short.length - 1 ) ++count
+
+      ++i
+    }
+  }
+
+  return count
 }
