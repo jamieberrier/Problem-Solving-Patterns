@@ -7,3 +7,7 @@ Pseudocode
 - if you complete the inner loop and find a match, increment the count of matches
 - return the count
 */
+
+function stringSearch() {
+  
+}
