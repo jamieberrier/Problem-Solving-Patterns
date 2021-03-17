@@ -17,11 +17,15 @@ const swap = (arr, idx1, idx2) => {
 }
 
 function bubbleSort(arr) {
+  // 1. Start looping, with a variable called i, from the end to the beginning of array
   for(let i = arr.length - 1; i > 0; i--) {
+    // 2. Start an inner loop, with a variable called j, from the beginning until i - 1
     for(let j = 0; j <= i - 1; j++) {
-      // if(arr[j] > arr[j + 1]) swap(arr, j, j + 1)
+      // 3. if array[j] > array[j + 1], swap the 2 values
       if(arr[j] > arr[j + 1]) [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]]
+      // if(arr[j] > arr[j + 1]) swap(arr, j, j + 1)
     }
   }
+  // 4. return sorted array
   return arr
 }
