@@ -16,9 +16,10 @@ function stringSearch(long, short) {
     // 2. loop over the shorter string
     for(let j = 0; j < short.length; j++) {
       // 3. if the characters don't match, break out of the inner loop
-      if(long[i] !== short[j]) break
+      // if(long[i] !== short[j]) break
+      if(short[j] !== long[i + j]) break
       // 4. if the characters do match keep going
-      ++i
+      //++i
       // 5. if you complete the inner loop and find a match, increment the count of matches
       if(j === short.length - 1 ) ++count
     }
