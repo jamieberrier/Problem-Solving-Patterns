@@ -9,23 +9,25 @@ Pseudocode:
 
 function selectionSort(arr) {
   for(let i = 0; i < arr.length; i++) {
-    // declare min
+    // declare current minimum value's index
     // intially, set to index of 1st element
+    // increment with each pass to grow sorted subsection and shrink unsorted subsection
+
       // min is incremented with each pass to shrink the searchable subset, 
       // decreasing the number of comparisons, 
       // since the smallest value is now sorted at the beginning
-    let min = i
+    let currentMin = i
     for(let j = i + 1; j < arr.length; j++) {
-      // compare arr[min] to the next item in the array
-      if(arr[j] < arr[min]) {
+      // compare arr[currentMin] to the next item in the array
+      if(arr[j] < arr[currentMin]) {
         // if smaller value found, assign that value's index to min
-        min = j
+        currentMin = j
       }
     }
     // if min is not the index you initially began with (i)
-    if(i !== min) {
+    if(i !== currentMin) {
       // swap the 2 values
-      [arr[i], arr[min]] = [arr[min], arr[i]]
+      [arr[i], arr[currentMin]] = [arr[currentMin], arr[i]]
     }
   }
 
