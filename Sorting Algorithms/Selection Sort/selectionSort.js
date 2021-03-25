@@ -20,17 +20,17 @@ function selectionSort(arr) {
     for(let j = i + 1; j < arr.length; j++) {
       // compare arr[currentMin] to the next item in the array
       if(arr[j] < arr[currentMin]) {
-        // if smaller value found, assign that value's index to min
+        // if smaller value found, assign that value's index to currentMin
         currentMin = j
       }
     }
-    // if min is not the index you initially began with (i)
+    // if currentMin is not the index you initially began with (i.e. i)
     if(i !== currentMin) {
       // swap the 2 values
       [arr[i], arr[currentMin]] = [arr[currentMin], arr[i]]
     }
   }
-
+  // return the sorted array
   return arr
 }
 
