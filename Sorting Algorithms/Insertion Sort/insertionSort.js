@@ -16,8 +16,11 @@ function insertionSort(arr){
   for(let i = 1; i < arr.length; i++) {
     currentVal = arr[i];
 
+    // j needs to be var to be accessed outside of loop
     // break if arr[j] is less than or equal to currentVal
-    for(let j = i - 1; j >= 0 && arr[j] > currentVal; j--) {
+    // if currentVal is less than arr[j], move arr[j] to the right
+    for(var j = i - 1; j >= 0 && arr[j] > currentVal; j--) {
+      // move element to the right
       arr[j + 1] = arr[j]
     }
     // put currentVal on the right of arr[j]
