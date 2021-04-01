@@ -4,6 +4,9 @@
   Pseudocode:
   1. Start by picking the 2nd element in the array (the 1st element is the sorted subsection)
   2. Compare 2nd element to the 1st element, swap if 2nd is smaller
+  3. Continue to the next element and if it's in the incorrect order, iterate through the sorted subsection to put the element in the correct place
+  4. Continue until the array is sorted
+  5. Return the sorted array
 */
 
 
