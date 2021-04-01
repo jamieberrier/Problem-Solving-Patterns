@@ -7,6 +7,8 @@
   3. Continue to the next element and if it's in the incorrect order, iterate through the sorted subsection to put the element in the correct place
   4. Continue until the array is sorted
   5. Return the sorted array
+
+  Time Complexity: O(n^2)
 */
 
 
@@ -17,12 +19,13 @@ function insertionSort(arr){
     currentVal = arr[i];
 
     // j needs to be var to be accessed outside of loop
-    // break if arr[j] is less than or equal to currentVal
-    // if currentVal is less than arr[j], move arr[j] to the right
+    // break if left element is less than or equal to currentVal
+    // if currentVal is less than arr[j] (left element), move arr[j] to the right
     for(var j = i - 1; j >= 0 && arr[j] > currentVal; j--) {
       // move element to the right
       arr[j + 1] = arr[j]
     }
+    // j is decremented (0 -> -1), so j is 1 less than when swapped
     // put currentVal on the right of arr[j]
     arr[j + 1] = currentVal;
   }
