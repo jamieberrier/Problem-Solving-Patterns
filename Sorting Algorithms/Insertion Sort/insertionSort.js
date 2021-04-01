@@ -9,11 +9,11 @@
   5. Return the sorted array
 
   Time Complexity: O(n^2)
+  Space Complexity: O(1)
 
   Good at:
   sorting live data
 */
-
 
 function insertionSort(arr){
 	let currentVal;
