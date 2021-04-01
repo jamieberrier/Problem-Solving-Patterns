@@ -1,4 +1,9 @@
+/*
+  Gradually builds up the sort by creating a left subsection, which is always sorted
 
+  Pseudocode:
+  1. Start by picking the second element in the array
+*/
 
 
 function insertionSort(arr){
