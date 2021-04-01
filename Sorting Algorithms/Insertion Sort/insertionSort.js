@@ -2,7 +2,8 @@
   Gradually builds up the sort by creating a left subsection, which is always sorted
 
   Pseudocode:
-  1. Start by picking the second element in the array
+  1. Start by picking the 2nd element in the array (the 1st element is the sorted subsection)
+  2. Compare 2nd element to the 1st element, swap if 2nd is smaller
 */
 
 
