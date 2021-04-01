@@ -9,6 +9,9 @@
   5. Return the sorted array
 
   Time Complexity: O(n^2)
+
+  Good at:
+  sorting live data
 */
 
 
